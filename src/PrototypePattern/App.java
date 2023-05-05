@@ -15,7 +15,7 @@ public class App {
         components.setFunctionality("Read temprature of objects");
 
         Robot robot = new Robot(23, features, components);
-    Robot anotherRobot = robot.clone();
+        Robot anotherRobot = robot.clone();
 
         System.out.println(robot.getId());
         System.out.println(robot.getComponents());
