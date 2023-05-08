@@ -1,0 +1,18 @@
+package StructralPattern.FilterPattern;
+
+import java.util.List;
+
+public class AndFilter implements Filter{
+    private  Filter filter, anotherFilter ;
+
+    public AndFilter(Filter filter, Filter anotherFilter) {
+        this.filter = filter;
+        this.anotherFilter = anotherFilter;
+    }
+
+    @Override
+    public List<Purse> meetFilter(List<Purse> purses) {
+        List<Purse> firstFilter = filter.meetFilter(purses);
+        return anotherFilter.meetFilter(firstFilter);
+    }
+}
